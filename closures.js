@@ -232,9 +232,17 @@ timeOutCounter();
 \******************************************************************************/
 
 var funcArray = [];
-
 //note that the () indicates a function; and it returns an index on the funcArray; which is an array of functions
 
+
+  for (var i = 0; i <= 5; i++){
+    funcArray.push(numLogger(i));
+}
+function numLogger(num){
+  return function(){
+    return num;
+  }
+}
 /*
   Make the following code work
 
